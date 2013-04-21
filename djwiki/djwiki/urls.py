@@ -31,8 +31,12 @@ from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
+from wiki.views import * #added
+
 urlpatterns = patterns('',
     # url(r'^wiki/', include('djwiki.urls')),
+    ('^$', home), #added
+    (r'^page/(?P<page_id>\d+)/$',page_specific), #added
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'wiki.views.index'),
+    # url(r'^$', 'wiki.views.index'),
 )

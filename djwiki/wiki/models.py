@@ -5,4 +5,4 @@ class Page(models.Model):
     content = models.TextField()
 
     def __unicode__(self):
-        return self.title    
+        return self.name    
