@@ -34,4 +34,5 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # url(r'^wiki/', include('djwiki.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', 'wiki.views.index'),
 )
